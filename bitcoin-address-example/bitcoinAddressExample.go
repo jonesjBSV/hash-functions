@@ -30,8 +30,8 @@ func main() {
 
 	a, _ := bscript.NewAddressFromPublicKey(privKey.PubKey(), true)
 
-	fmt.Printf("PubKeyPoint: %\n", privKey.PublicKey.X)
-	fmt.Printf("PubKeyPoint: %\n", privKey.PublicKey.Y)
+	fmt.Printf("PubKeyPoint X: %s\n", privKey.PublicKey.X)
+	fmt.Printf("PubKeyPoint Y: %s\n", privKey.PublicKey.Y)
 	fmt.Printf("Compressed PubKey: %s\n", hex.EncodeToString(privKey.PubKey().SerialiseCompressed()))
 	fmt.Printf("Address: %s\n", address)
 	fmt.Printf("verfication: %s\n", a.AddressString)
